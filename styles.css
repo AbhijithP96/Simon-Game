@@ -1,7 +1,12 @@
 body {
   text-align: center;
-  background-color: #011F3F;
   background: url("bg.jpg");
+  background-size: cover;
+  background-color: #011F3F;
+}
+
+.wrong{
+  background : url("red.jpg");
   background-size: cover;
 }
 

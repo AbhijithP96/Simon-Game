@@ -17,12 +17,13 @@ $(document).on("keydown", function () {
 
 
 $("div[type='button']").click(function (){
+    if(check !=0){
     var picked = $(this).attr("id");
     console.log(picked);
     playSound(picked);
     animatePress(picked);
     userClickedPattern.push(picked);
-    checkAnswer(userClickedPattern.length - 1);
+    checkAnswer(userClickedPattern.length - 1);}
         
 });
 function game(){
@@ -77,9 +78,9 @@ function checkAnswer(currentLevel){
 }
 
 function endGame(){
-    $("body").css("background-color" , "red");
+    $("body").addClass("wrong");
     setTimeout(function () {
-        $("body").css("background-color" , "#011F3F");
+        $("body").removeClass("wrong");
     },100);
     playSound('wrong');
     $("h1").text("Game Over, Press Any Key to Restart");
