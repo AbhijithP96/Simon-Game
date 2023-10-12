@@ -1,6 +1,8 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  background: url("bg.jpg");
+  background-size: cover;
 }
 
 #level-title {
